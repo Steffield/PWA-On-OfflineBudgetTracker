@@ -1,16 +1,12 @@
 const FILES_TO_CACHE = [
   "/",
   "/index.html", 
+  "/db.js",
   "/index.js", 
   "/styles.css",
   "/manifest.webmanifest",
-  "/db.js",
-
-  //these icons were in starter file but not actually used, so probably not needed to cache
-  "./icons/icon-512x512.png", 
-  "./icons/icon-192x192.png"
-  // "/bootstrap/4.4.1/css/bootstrap.min.css"
-  // "css/font-awesome.min.css"
+  "./icons/icon-192x192.png",
+  "./icons/icon-512x512.png"
 ];
 
 
@@ -79,10 +75,9 @@ self.addEventListener("fetch", function(evt) {
 }
 
 evt.respondWith(
-      caches.open(CACHE_NAME).then(cache => {
-        return cache.match(evt.request).then(response => {
+      caches.match(evt.request).then(response => {
           return response || fetch(evt.request);
-        });
-      }));
+        })
+      );
 });
 
