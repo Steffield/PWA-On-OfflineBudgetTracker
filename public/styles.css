@@ -8,12 +8,17 @@ button, input {
   font-family: Arial;
 }
 
+/* .jumbotron{
+  background-color: #fff5d7!important;
+
+} */
+
 #add-btn{
-  background-color: #00c8c9;
+  background-color: #dddfff;
 }
 
 #sub-btn{
-  background-color: #c90064;
+  background-color: #ffaaab;
 }
 
 table {
