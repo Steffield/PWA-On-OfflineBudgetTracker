@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#317EFB">
+  <meta name="description" content="A budget tracker app">
+  <link rel="shortcut icon" href="icons/icon-192x192.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.webmanifest" />
+
+
+  <title>Budget Tracker</title>
+</head>
+<body>
+  <!-- <div class="wrapper"> -->
+    <div class ="jumbotron jumbotron-fluid text-center">
+      <div class="container">
+        <h1 class="display-4 ">On-/ Offline Budget Tracker</h1>
+        <p class="lead">Track your budget even when you are offline.</p>
+        <!-- <div class="total"> -->
+          <p class="total font-weight-bold">Your total is: $<span id="total">0</span></p>
+        <!-- </div> -->
+      </div>  
+    </div>
+
+    <div class = "wrapper">
+      
+      <div class="form form-row mb-3">
+        <div class ="col">
+          <input class="form-control" type="text" id="t-name" placeholder="Name of transaction" />
+        </div>
+        <div class ="col">
+        <input class="form-control" type="number" min="0" id="t-amount" placeholder="Transaction amount" />
+        </div>
+        <button class="btn mr-2" id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
+        <button class="btn btn-danger"id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
+        <p class="error"></p>
+      </div>
+     
+
+      <div class="transactions">
+        <table class="table">
+          <thead class="thead-dark">
+            <th scope="col">Transaction</th>
+            <th scope ="col">Amount</th>
+          </thead>
+          <tbody id="tbody">
+            
+          </tbody>
+        </table>
+      </div>
+      
+      <canvas id="myChart"></canvas>
+    </div>
+    
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="/db.js"></script>
+  <script src="/index.js"></script>
+ 
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js").then(reg => {
+          console.log("We found your service worker file!", reg);
+        });
+      });
+    }
+  </script>
+ 
+
+</body>
+</html>
