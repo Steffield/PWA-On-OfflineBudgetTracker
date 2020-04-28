@@ -6,6 +6,8 @@ body {
 button, input {
   font-size: 100%;
   font-family: Arial;
+  margin: 2px!important;
+  border: 1px solid black;
 }
 
 /* .jumbotron{
@@ -15,6 +17,7 @@ button, input {
 
 #add-btn{
   background-color: #dddfff;
+  margin-left:5px!important;
 }
 
 #sub-btn{
@@ -66,4 +69,26 @@ tr:nth-child(even) {
   overflow: auto;
   width: 100%;
   /* margin: 0 auto; */
+}
+
+/* .form-control{
+  margin: 5px!important;
+}
+
+button{
+  margin: 5px!important;
+} */
+
+
+
+@media only screen and (max-width: 414px) {
+  .display-4 {
+    font-size: 2.5rem
+  }
+  .total{
+    font-size: 1.2rem
+  }
+  table{
+    font-size:.8rem
+  }
 }
