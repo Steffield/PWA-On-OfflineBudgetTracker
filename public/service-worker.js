@@ -65,7 +65,6 @@ self.addEventListener("fetch", function(evt) {
           })
           .catch(err => {
             // Network request failed, try to get it from the cache.
-            console.log(cache.match(evt.request));
             return cache.match(evt.request);
           });
       }).catch(err => console.log(err))
@@ -75,9 +74,11 @@ self.addEventListener("fetch", function(evt) {
 }
 
 evt.respondWith(
-      caches.match(evt.request).then(response => {
+      caches.open(CACHE_NAME).then(cache => {
+        return cache.match(evt.request).then(response => {
           return response || fetch(evt.request);
         })
-      );
+      })
+    );
 });
 
