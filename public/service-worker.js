@@ -5,8 +5,8 @@ const FILES_TO_CACHE = [
   "/index.js", 
   "/styles.css",
   "/manifest.webmanifest",
-  "./icons/icon-192x192.png",
-  "./icons/icon-512x512.png"
+  "/icons/icon-192x192.png",
+  "/icons/icon-512x512.png"
 ];
 
 
@@ -74,11 +74,12 @@ self.addEventListener("fetch", function(evt) {
 }
 
 evt.respondWith(
-      caches.open(CACHE_NAME).then(cache => {
-        return cache.match(evt.request).then(response => {
+      // caches.open(CACHE_NAME).then(cache => {
+      //   return cache
+        caches.match(evt.request).then(response => {
           return response || fetch(evt.request);
         })
-      })
+      // })
     );
 });
 
