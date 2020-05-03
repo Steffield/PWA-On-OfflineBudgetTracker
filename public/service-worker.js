@@ -1,12 +1,13 @@
 const FILES_TO_CACHE = [
-  "/",
+  "/", 
   "/index.html", 
   "/db.js",
   "/index.js", 
   "/styles.css",
   "/manifest.webmanifest",
-  "/icons/icon-192x192.png",
-  "/icons/icon-512x512.png"
+  "/icons/icon-512x512.png", 
+  "/icons/icon-192x192.png"
+
 ];
 
 
@@ -15,7 +16,7 @@ const DATA_CACHE_NAME = "data-cache-v1";
 
 // install
 self.addEventListener("install", function(evt) {
-  console.log("service worker install bundle of files- install event runs");
+  // console.log("service worker install bundle of files- install event runs");
   evt.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
       console.log("Your files were pre-cached successfully!");
@@ -30,7 +31,7 @@ self.addEventListener("install", function(evt) {
 
 // activate
 self.addEventListener("activate", function(evt) {
-  console.log("service worker activates data migration runs")
+  // console.log("service worker activates data migration runs")
   evt.waitUntil(
     caches.keys().then(keyList => {
       return Promise.all(
@@ -60,11 +61,12 @@ self.addEventListener("fetch", function(evt) {
             if (response.status === 200) {
               cache.put(evt.request.url, response.clone());
             }
-            console.log(response);
+            // console.log(response);
             return response;
           })
           .catch(err => {
             // Network request failed, try to get it from the cache.
+            console.log(cache.match(evt.request));
             return cache.match(evt.request);
           });
       }).catch(err => console.log(err))
@@ -74,12 +76,10 @@ self.addEventListener("fetch", function(evt) {
 }
 
 evt.respondWith(
-      // caches.open(CACHE_NAME).then(cache => {
-      //   return cache
-        caches.match(evt.request).then(response => {
+      caches.open(CACHE_NAME).then(cache => {
+        return cache.match(evt.request).then(response => {
           return response || fetch(evt.request);
-        })
-      // })
-    );
+        });
+      }));
 });
 

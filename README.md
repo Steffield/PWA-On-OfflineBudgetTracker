@@ -28,7 +28,7 @@ Giving users a fast and easy way to track their money is important, but allowing
 
 ## Description
 
-This apllication is a budget tracker that can track your expenses even offline as a progressive web application. For the full offline experience, open the application in a new Chrome tab. Open Chrome's three-dot menu (next to the address bar) and click on "Install Online-Offline Budget Tracker" in the menu.
+This application is a budget tracker that can track your expenses even offline as a progressive web application. For the full offline experience, open the application in a new Chrome tab. Open Chrome's three-dot menu (next to the address bar) and click on "Install Online-Offline Budget Tracker" in the menu.
 
 ## Technologies Used
 
@@ -46,7 +46,7 @@ Git pull and run the following command:
 
 The heroku deployed link: <a href="https://steffield-pwa-budget-tracker.herokuapp.com/">PWA Budget Tracker</a>.
 
-![](#)
+![](budget.gif)
 
 ## Questions
 

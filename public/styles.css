@@ -1,31 +1,37 @@
 body {
   font-size: 120%;
-  font-family: Arial;
+  background-color: #f1faee;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-button, input {
-  font-size: 100%;
-  font-family: Arial;
-  margin: 2px!important;
-  border: 1px solid black;
+input{
+  background-color: #f5fcf3!important;
+  border-color: #1d3557!important;
+  box-shadow: inset 0px 0px 2px #457B9d;
+  ;
 }
 
-/* .jumbotron{
-  background-color: #fff5d7!important;
-
-} */
 
 #add-btn{
-  background-color: #dddfff;
-  margin-left:5px!important;
+  background-color: #a8dadc;
+  color: #1d3557;
+  border-color: #457B9d;
+
 }
 
 #sub-btn{
-  background-color: #ffaaab;
+  background-color: #1d3557;
+  color: #f1faee;
+
 }
 
 table {
   width: 100%;
+  outline: 1px solid #457B9d!important
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f5fcf3;
 }
 
 td, th {
@@ -33,10 +39,26 @@ td, th {
   text-align: left;
   padding: 8px;
 }
-
-tr:nth-child(even) {
+.thead{
+  background-color: #457B9d;
+  color: #f1faee
+}
+/* tr:nth-child(even) {
   background-color: #dddddd;
-} 
+}  */
+
+
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #457b9d;
+    Color: #f1faee;
+    /* border-radius: .3rem; */
+    /* box-shadow: inset 2px 0px 2px whitesmoke; */
+    border-bottom: 3px solid #1d3557;
+    box-shadow: inset 0px 0px 5px #457B9d;
+
+}
 
 .error {
   color: red;
@@ -71,24 +93,25 @@ tr:nth-child(even) {
   /* margin: 0 auto; */
 }
 
-/* .form-control{
-  margin: 5px!important;
+@media (min-width: 576px){
+  .jumbotron {
+      padding: 2rem 1rem;
+  }
 }
 
-button{
-  margin: 5px!important;
-} */
-
-
-
-@media only screen and (max-width: 414px) {
-  .display-4 {
-    font-size: 2.5rem
+@media (max-width: 400px){
+  .jumbotron {
+      padding: 0 0;
+      font-size: .8em
   }
-  .total{
-    font-size: 1.2rem
+  h1{
+    font-size: 3em!important
   }
-  table{
-    font-size:.8rem
+  input, button{
+    margin: 3px;
+    justify-content: center
+  }
+  td{
+    font-size: .8em
   }
 }
