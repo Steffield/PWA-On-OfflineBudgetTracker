@@ -2,17 +2,17 @@
 
 ## Table of Content
 
-*[User Story](#User)
+\*[User Story](#User)
 
-*[Business Context](#Business-Context)
+\*[Business Context](#Business-Context)
 
-*[Description](#Description)
+\*[Description](#Description)
 
-*[Technologies Used](#Technologies-Used)
+\*[Technologies Used](#Technologies-Used)
 
-*[Installation](#Installation)
+\*[Installation](#Installation)
 
-*[Deployed Link](#Deployed)
+\*[Deployed Link](#Deployed)
 
 ## User Story
 
@@ -40,16 +40,16 @@ Git pull and run the following command:
 
 ```
     npm install
-``` 
+```
 
 ## Deployed Link:
 
 The heroku deployed link: <a href="https://steffield-pwa-budget-tracker.herokuapp.com/">PWA Budget Tracker</a>.
 
-![](budget.gif)
+![](PWA.png)
 
 ## Questions
 
 If you have any questions about the repo, open an issue.
 
-<img src="https://avatars0.githubusercontent.com/u/56233744?v=4" width ="70px" height="70px"> 
+<img src="https://avatars0.githubusercontent.com/u/56233744?v=4" width ="70px" height="70px">
