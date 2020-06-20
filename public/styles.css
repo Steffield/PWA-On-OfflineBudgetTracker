@@ -1,63 +1,79 @@
 body {
   font-size: 120%;
-  background-color: #f1faee;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Courier New", Courier, monospace;
 }
 
-input{
-  background-color: #f5fcf3!important;
-  border-color: #1d3557!important;
-  box-shadow: inset 0px 0px 2px #457B9d;
-  ;
+canvas {
+  font-family: "Courier New", Courier, monospace;
 }
 
-
-#add-btn{
-  background-color: #a8dadc;
-  color: #1d3557;
-  border-color: #457B9d;
-
+input {
+  /* border-bottom-color: #536dfe !important; */
+  border-radius: 0 !important;
 }
 
-#sub-btn{
-  background-color: #1d3557;
-  color: #f1faee;
+#add-btn {
+  border: 2px solid green;
+  border-radius: 25px;
+}
 
+#add-btn:hover {
+  color: black;
+  background-color: #9fe1b3;
+}
+
+#sub-btn {
+  border: 2px solid red;
+  border-radius: 25px;
+}
+#sub-btn:hover {
+  color: black;
+  background-color: #ffcdcd;
+}
+
+.fa-minus {
+  color: red;
+}
+
+.fa-plus {
+  color: green;
 }
 
 table {
   width: 100%;
-  outline: 1px solid #457B9d!important
+  /* outline: 1px solid #536dfe !important; */
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: #f5fcf3;
+  background-color: #eff1ff;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
 }
-.thead{
-  background-color: #457B9d;
-  color: #f1faee
+.thead {
+  background-color: #536dfe;
+  color: #f1faee;
 }
 /* tr:nth-child(even) {
   background-color: #dddddd;
 }  */
 
-
 .jumbotron {
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
-    background-color: #457b9d;
-    Color: #f1faee;
-    /* border-radius: .3rem; */
-    /* box-shadow: inset 2px 0px 2px whitesmoke; */
-    border-bottom: 3px solid #1d3557;
-    box-shadow: inset 0px 0px 5px #457B9d;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #536dfe;
+  color: #f1faee;
+  border-radius: 0 !important;
+}
 
+svg {
+  float: left;
+  height: 30vh;
+  width: 30vw;
 }
 
 .error {
@@ -66,16 +82,15 @@ td, th {
 
 .wrapper {
   margin: 0 auto;
-  max-width: 825px;
+  max-width: 1050px;
   text-align: center;
 }
 
 .total {
   font-size: 150%;
-  /* text-decoration: underline; */
 }
 
-#total{
+#total {
   text-decoration: underline;
   font-weight: bold;
 }
@@ -93,25 +108,26 @@ td, th {
   /* margin: 0 auto; */
 }
 
-@media (min-width: 576px){
+@media (min-width: 576px) {
   .jumbotron {
-      padding: 2rem 1rem;
+    padding: 2rem 1rem;
   }
 }
 
-@media (max-width: 400px){
+@media (max-width: 400px) {
   .jumbotron {
-      padding: 0 0;
-      font-size: .8em
+    padding: 0 0;
+    font-size: 0.8em;
   }
-  h1{
-    font-size: 3em!important
+  h1 {
+    font-size: 3em !important;
   }
-  input, button{
+  input,
+  button {
     margin: 3px;
-    justify-content: center
+    justify-content: center;
   }
-  td{
-    font-size: .8em
+  td {
+    font-size: 0.8em;
   }
 }
